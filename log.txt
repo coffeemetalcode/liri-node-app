@@ -1,8 +1,57 @@
+***  Concert  ***
 
 Artist: Coheed and Cambria
 Venue: O2 Academy Birmingham
 Location: Birmingham
 Date: 10/14/2018
+    
+------------------------------------------------------------
+
+***  Movie  ***
+Title: Star Trek
+Year: 2009
+IMBD Rating: 8.0/10
+Rotten Tomatoes Rating: 94%
+Country: USA, Germany
+Language: English
+Plot: The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.
+Actors: Chris Pine, Zachary Quinto, Leonard Nimoy, Eric Bana
+    
+------------------------------------------------------------
+
+***  Movie  ***
+Title: Star Trek
+Year: 2009
+IMBD Rating: 8.0/10
+Rotten Tomatoes Rating: 94%
+Country: USA, Germany
+Language: English
+Plot: The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.
+Actors: Chris Pine, Zachary Quinto, Leonard Nimoy, Eric Bana
+    
+------------------------------------------------------------
+
+***  Movie  ***
+Title: Star Trek
+Year: 2009
+IMBD Rating: 8.0/10
+Rotten Tomatoes Rating: 94%
+Country: USA, Germany
+Language: English
+Plot: The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.
+Actors: Chris Pine, Zachary Quinto, Leonard Nimoy, Eric Bana
+    
+------------------------------------------------------------
+
+***  Movie  ***
+Title: Mr. Nobody
+Year: 2009
+IMBD Rating: 7.9/10
+Rotten Tomatoes Rating: 67%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
     
 ------------------------------------------------------------
 

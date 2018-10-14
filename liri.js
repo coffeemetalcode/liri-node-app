@@ -12,7 +12,7 @@ var request = require("request");
 var fs = require("fs");
 
 // moment
-var moment = require('moment');
+var moment = require("moment");
 
 // grab input
 var mode = process.argv[2];
@@ -54,19 +54,18 @@ function concert() {
     // parse JSON data
     var jsonData = JSON.parse(body)[0];
 
-    // var concertData = [
-    //   "Artist: " + input,
-    //   "Venue: " + jsonData.venue.name,
-    //   "Location: " + jsonData.venue.city
-    // ];
+    // nice format for ouptut
+    var concertData = `***  Concert  ***
 
-    var concertData = `Artist: ${input}
+Artist: ${jsonData.lineup}
 Venue: ${jsonData.venue.name}
 Location: ${jsonData.venue.city}
-Date: ${moment(jsonData.datetime).format('MM/DD/YYYY')}
-    `
+Date: ${moment(jsonData.datetime).format("MM/DD/YYYY")}
+    `;
+    // log the output to the console
     console.log(concertData);
 
+    // write output to the log file
     fs.appendFile("log.txt", concertData + divider, function(err) {
       if (err) throw err;
       console.log(concertData);
@@ -87,6 +86,39 @@ function spotSong() {
 
 function movie() {
   console.log("movie function");
+  if (!input) {
+    input = "mr nobody";
+  }
+  
+  var URL = `http://www.omdbapi.com/?t=${input}&apikey=28fabb12`;
+
+  request(URL, function(error, response, body) {
+    console.log("error:", error);
+    console.log("statusCode:", response && response.statusCode);
+
+    // parse JSON data
+    var jsonData = JSON.parse(body);
+
+    // nice format for output
+    var movieData = `***  Movie  ***
+Title: ${jsonData.Title}
+Year: ${jsonData.Year}
+IMBD Rating: ${jsonData.Ratings[0].Value}
+Rotten Tomatoes Rating: ${jsonData.Ratings[1].Value}
+Country: ${jsonData.Country}
+Language: ${jsonData.Language}
+Plot: ${jsonData.Plot}
+Actors: ${jsonData.Actors}
+    `;
+    // log output to the console
+    console.log(movieData);
+
+    // write output to the log file
+    fs.appendFile("log.txt", movieData + divider, function(err) {
+      if (err) throw err;
+      console.log(movieData);
+    });
+  });
 }
 
 function what() {
