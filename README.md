@@ -17,12 +17,3 @@ concert-this | _artist name_ | returns the artist's name and the venue, location
 spotify-this-song | _song name_ | returns the song's artist, title, Spotify preview link, and song's album and writes the result to a log file
 movie-this | _movie title_ | returns the movie's title, year, consumer ratings, country, language, plot, and actors and writes the result to a log file
 do-what-it-says | _null_ | loads input arguments from the file _random.txt_ and returns the expected result
-
-
-
-where 'arg 1' is one of the following:
-
-* concert-this
-* spotify-this-song
-* movie-this
-* do-what-it-says
