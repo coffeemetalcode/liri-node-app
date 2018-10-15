@@ -10,6 +10,8 @@ Search for:
 * Movies by title
 * A random concert, Spotify, or movie title search based on text contained in a local file.
 
+See the liri-node-app [in action.](https://drive.google.com/file/d/1oTje3jXFrfXmbzzVoIdqT8okpmYH5MhF/view)
+
 **Dependencies**
 
 * dotenv
