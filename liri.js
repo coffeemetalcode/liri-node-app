@@ -35,10 +35,10 @@ function liri() {
   if (mode === "concert-this") {
     concert();
   } else if (mode === "spotify-this-song") {
-    spotSong();
+    song();
   } else if (mode === "movie-this") {
     movie();
-  } else if (mode === "do-what-it-sayse") {
+  } else if (mode === "do-what-it-says") {
     what();
   } else {
     console.log("I'm not sure what you mean");
@@ -77,7 +77,7 @@ Date: ${moment(jsonData.datetime).format("MM/DD/YYYY")}
   });
 }
 
-function spotSong() {
+function song() {
   console.log("spotify function");
   spotify
     .search({ type: "track", query: input })
@@ -138,4 +138,15 @@ Actors: ${jsonData.Actors}
 
 function what() {
   console.log("what function");
+  fs.readFile('random.txt', 'utf-8', function(err, data) {
+    if (err) {
+      throw err;
+    }
+    contents = data.split(" ");
+    console.log(contents);
+    mode = contents[0];
+    console.log('mode: ' + mode);
+    input = contents.slice(1).join(' ');
+    console.log('input: ' + input);
+  });
 }
