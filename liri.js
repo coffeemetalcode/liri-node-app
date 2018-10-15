@@ -69,7 +69,7 @@ Location: ${jsonData.venue.city}
 Date: ${moment(jsonData.datetime).format("MM/DD/YYYY")}
     `;
     // log the output to the console
-    console.log('Concert data written to log');
+    console.log("Concert data written to log");
 
     // write output to the log file
     fs.appendFile("log.txt", concertData + divider, function(err) {
@@ -92,7 +92,7 @@ Track: ${raw.name}
 Preview Link: ${raw.preview_url}
 Album: ${raw.album.name}
       `;
-      console.log('Song data written to log');
+      console.log("Song data written to log");
       fs.appendFile("log.txt", songData + divider);
     })
     .catch(function(err) {
@@ -128,7 +128,7 @@ Plot: ${jsonData.Plot}
 Actors: ${jsonData.Actors}
     `;
     // log output to the console
-    console.log('Movie data written to log');
+    console.log("Movie data written to log");
 
     // write output to the log file
     fs.appendFile("log.txt", movieData + divider, function(err) {
@@ -161,5 +161,11 @@ function what() {
 }
 
 function help() {
-  console.log('help');
+  fs.readFile("README.md", "utf-8", function(err, data) {
+    if (err) {
+      throw err;
+    }
+    console.log(data);
+  });
 }
+// console.log('help');
