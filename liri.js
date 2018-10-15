@@ -74,7 +74,7 @@ Date: ${moment(jsonData.datetime).format("MM/DD/YYYY")}
     // write output to the log file
     fs.appendFile("log.txt", concertData + divider, function(err) {
       if (err) throw err;
-      console.log(concertData);
+      // console.log(concertData);
     });
   });
 }
@@ -133,7 +133,7 @@ Actors: ${jsonData.Actors}
     // write output to the log file
     fs.appendFile("log.txt", movieData + divider, function(err) {
       if (err) throw err;
-      console.log(movieData);
+      // console.log(movieData);
     });
   });
 }

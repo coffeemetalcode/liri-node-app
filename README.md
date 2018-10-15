@@ -17,7 +17,7 @@ Search for:
 * node-spotify-api
 * request
 
-Do 'npm install' from the program's directory. See 'package.json' and the npm docs for more information.
+Do 'npm install' from the program's directory. See 'package.json' and the [npm docs](https://docs.npmjs.com/) for more information.
 
 **Usage**
 

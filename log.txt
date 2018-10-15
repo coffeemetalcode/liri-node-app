@@ -1,10 +1,10 @@
-***  Song  ***
+***  Concert  ***
 
-Artist: Coheed and Cambria
-Track: Time Consumer
-Preview Link: https://p.scdn.co/mp3-preview/d07070b4e1a28dd8e7004e87d2a9505336098761?cid=cd275c7cbd794c83a4cd6cd9d1102be7
-Album: The Second Stage Turbine Blade (Re-Issue)
-      
+Artist: Phil Collins
+Venue: Bell Centre
+Location: Montreal
+Date: 10/16/2018
+    
 ------------------------------------------------------------
 
 ***  Song  ***
@@ -13,37 +13,32 @@ Artist: Coheed and Cambria
 Track: Time Consumer
 Preview Link: https://p.scdn.co/mp3-preview/d07070b4e1a28dd8e7004e87d2a9505336098761?cid=cd275c7cbd794c83a4cd6cd9d1102be7
 Album: The Second Stage Turbine Blade (Re-Issue)
-      
-------------------------------------------------------------
-
-***  Song  ***
-
-Artist: Backstreet Boys
-Track: I Want It That Way
-Preview Link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=cd275c7cbd794c83a4cd6cd9d1102be7
-Album: The Hits--Chapter One
       
 ------------------------------------------------------------
 
 ***  Movie  ***
 
-Title: A Wrinkle in Time
-Year: 2018
-IMBD Rating: 4.2/10
-Rotten Tomatoes Rating: 42%
+Title: The Jerk
+Year: 1979
+IMBD Rating: 7.2/10
+Rotten Tomatoes Rating: 85%
 Country: USA
 Language: English
-Plot: After the disappearance of her scientist father, three peculiar beings send Meg, her brother, and her friend to space in order to find him.
-Actors: Storm Reid, Oprah Winfrey, Reese Witherspoon, Mindy Kaling
+Plot: An idiotic man struggles to make it through life on his own in St. Louis.
+Actors: Steve Martin, Bernadette Peters, Catlin Adams, Mabel King
     
 ------------------------------------------------------------
 
-***  Concert  ***
+***  Movie  ***
 
-Artist: Phil Collins
-Venue: Barclays Center
-Location: Brooklyn
-Date: 10/14/2018
+Title: Mr. Nobody
+Year: 2009
+IMBD Rating: 7.9/10
+Rotten Tomatoes Rating: 67%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
     
 ------------------------------------------------------------
 
