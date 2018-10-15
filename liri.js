@@ -1,9 +1,11 @@
 // require file with stored environment variables
 require("dotenv").config();
-var Spotify = require("node-spotify-api");
 
 // import the 'keys.js' file for Spotify keys
 var keys = require("./keys");
+
+// spotify
+var Spotify = require("node-spotify-api");
 
 // request
 var request = require("request");
@@ -36,8 +38,10 @@ function liri() {
     spotSong();
   } else if (mode === "movie-this") {
     movie();
-  } else {
+  } else if (mode === "do-what-it-sayse") {
     what();
+  } else {
+    console.log("I'm not sure what you mean");
   }
 }
 
@@ -75,13 +79,23 @@ Date: ${moment(jsonData.datetime).format("MM/DD/YYYY")}
 
 function spotSong() {
   console.log("spotify function");
-  spotify.search({ type: "track", query: input }, function(err, data) {
-    if (err) {
-      return console.log("Error occurred: " + err);
-    }
+  spotify
+    .search({ type: "track", query: input })
+    .then(function(response) {
+      var raw = response.tracks.items[0];
+      var songData = `***  Song  ***
 
-    console.log(data);
-  });
+Artist: ${raw.album.artists[0].name}
+Track: ${raw.name}
+Preview Link: ${raw.preview_url}
+Album: ${raw.album.name}
+      `;
+      console.log(songData);
+      fs.appendFile("log.txt", songData + divider);
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
 }
 
 function movie() {
@@ -89,7 +103,7 @@ function movie() {
   if (!input) {
     input = "mr nobody";
   }
-  
+
   var URL = `http://www.omdbapi.com/?t=${input}&apikey=28fabb12`;
 
   request(URL, function(error, response, body) {
@@ -101,6 +115,7 @@ function movie() {
 
     // nice format for output
     var movieData = `***  Movie  ***
+
 Title: ${jsonData.Title}
 Year: ${jsonData.Year}
 IMBD Rating: ${jsonData.Ratings[0].Value}
