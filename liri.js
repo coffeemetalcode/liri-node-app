@@ -40,6 +40,8 @@ function liri() {
     movie();
   } else if (mode === "do-what-it-says") {
     what();
+  } else if (!mode || mode === "help") {
+    help();
   } else {
     console.log("I'm not sure what you mean");
   }
@@ -47,7 +49,7 @@ function liri() {
 
 function concert() {
   // verify the concert function has been triggered
-  console.log("concert function");
+  // console.log("concert function");
 
   var URL = `https://rest.bandsintown.com/artists/${input}/events?app_id=codingbootcamp`;
 
@@ -67,7 +69,7 @@ Location: ${jsonData.venue.city}
 Date: ${moment(jsonData.datetime).format("MM/DD/YYYY")}
     `;
     // log the output to the console
-    console.log(concertData);
+    console.log('Concert data written to log');
 
     // write output to the log file
     fs.appendFile("log.txt", concertData + divider, function(err) {
@@ -78,7 +80,7 @@ Date: ${moment(jsonData.datetime).format("MM/DD/YYYY")}
 }
 
 function song() {
-  console.log("spotify function");
+  // console.log("spotify function");
   spotify
     .search({ type: "track", query: input })
     .then(function(response) {
@@ -90,7 +92,7 @@ Track: ${raw.name}
 Preview Link: ${raw.preview_url}
 Album: ${raw.album.name}
       `;
-      console.log(songData);
+      console.log('Song data written to log');
       fs.appendFile("log.txt", songData + divider);
     })
     .catch(function(err) {
@@ -99,7 +101,7 @@ Album: ${raw.album.name}
 }
 
 function movie() {
-  console.log("movie function");
+  // console.log("movie function");
   if (!input) {
     input = "mr nobody";
   }
@@ -126,7 +128,7 @@ Plot: ${jsonData.Plot}
 Actors: ${jsonData.Actors}
     `;
     // log output to the console
-    console.log(movieData);
+    console.log('Movie data written to log');
 
     // write output to the log file
     fs.appendFile("log.txt", movieData + divider, function(err) {
@@ -138,15 +140,26 @@ Actors: ${jsonData.Actors}
 
 function what() {
   console.log("what function");
-  fs.readFile('random.txt', 'utf-8', function(err, data) {
+  fs.readFile("random.txt", "utf-8", function(err, data) {
     if (err) {
       throw err;
     }
     contents = data.split(" ");
     console.log(contents);
     mode = contents[0];
-    console.log('mode: ' + mode);
-    input = contents.slice(1).join(' ');
-    console.log('input: ' + input);
+    console.log("mode: " + mode);
+    input = contents.slice(1).join(" ");
+    console.log("input: " + input);
+    if (mode === "concert-this") {
+      concert();
+    } else if (mode === "spotify-this-song") {
+      song();
+    } else if (mode === "movie-this") {
+      movie();
+    }
   });
+}
+
+function help() {
+  console.log('help');
 }
